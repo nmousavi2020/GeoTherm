@@ -5,6 +5,12 @@
 
 GeoTherm is a Python-based project for calculating and visualizing global subsurface temperatures using surface temperature data and geothermal gradients.
 
+## Citation
+
+If you use GeoTherm or its datasets in your research, please cite:
+
+Mousavi, N. (2026). GeoTherm: A Package for Global Subsurface Thermal Calculations (0–600 m) for Geothermal Engineering Applications (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23735491
+
 ## Features
 
 - Calculates temperatures at depths of 100–600 m.
