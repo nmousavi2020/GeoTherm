@@ -1,214 +1,104 @@
 
+# GeoTherm
 
-\# GeoTherm
-
-
+## Copyright (c) 2026 N. Mousavi. All rights reserved.
 
 GeoTherm is a Python-based project for calculating and visualizing global subsurface temperatures using surface temperature data and geothermal gradients.
 
+## Features
 
+- Calculates temperatures at depths of 100–600 m.
+- Generates global subsurface temperature maps.
+- Exports results to CSV and PNG files.
+- Supports user-defined plotting depths and temperature limits.
 
-\## Features
+## Temperature Model
 
-
-
-\- Calculates temperatures at depths of 100–600 m.
-
-\- Generates global subsurface temperature maps.
-
-\- Exports results to CSV and PNG files.
-
-\- Supports user-defined plotting depths and temperature limits.
-
-
-
-\## Temperature Model
-
-
-
-`T(z) = ST + TG × z`
-
-
+T(z) = ST + TG × z
 
 Where:
+- T(z): Subsurface temperature (°C)
+- ST: Surface temperature (°C)
+- TG: Geothermal gradient (°C/km)
+- z: Depth (km)
 
+## Input Data
 
-
-\- `T(z)`: Subsurface temperature (°C)
-
-\- `ST`: Surface temperature (°C)
-
-\- `TG`: Geothermal gradient (°C/km)
-
-\- `z`: Depth (km)
-
-
-
-\## Input Data
-
-
-
-\- `IHFC\_with\_surface\_temperature.csv`
-
-
+- IHFC_with_surface_temperature.csv
 
 Required columns:
+- lon
+- lat
+- elevation
+- TG
+- surface_temperature
 
+## Output Files
 
+- IHCF_subsurface_temperature.csv
+- subsurface_temperature_<DEPTH>m.png
 
-\- `lon`
+## Requirements
 
-\- `lat`
+- Python 3.10+
+- pandas
+- matplotlib
+- geopandas
 
-\- `elevation`
-
-\- `TG`
-
-\- `surface\_temperature`
-
-
-
-\## Output Files
-
-
-
-\- `IHCF\_subsurface\_temperature.csv`
-
-\- `subsurface\_temperature\_<DEPTH>m.png`
-
-
-
-\## Requirements
-
-
-
-\- Python 3.10+
-
-\- pandas
-
-\- matplotlib
-
-\- geopandas
-
-
-
-\## Installation
-
-
+## Installation
 
 ```bash
-
-git clone https://github.com/YOUR\_USERNAME/GeoTherm.git
-
+git clone https://github.com/nmousavi2020/GeoTherm.git
 cd GeoTherm
-
 pip install -r requirements.txt
-
 ```
 
+## Usage
 
-
-\## Usage
-
-
-
-\### Calculate Subsurface Temperatures
-
-
+### Calculate Subsurface Temperatures
 
 ```bash
-
-python subsurface\_temperature.py
-
+python forward.py
 ```
 
-
-
-\### Generate a Global Temperature Map
-
-
+### Generate a Global Temperature Map
 
 ```bash
-
-python plot\_subsurface\_temperature.py
-
+python plotSubtemp.py
 ```
 
-
-
-\## Customize the Plot
-
-
-
-Edit these settings in the plotting script:
-
-
+## Customize the Plot
 
 ```python
-
 DEPTH = 600
-
 VMIN = 0
-
 VMAX = 80
-
 ```
 
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
 GeoTherm/
-
-├── subsurface\_temperature.py
-
-├── plot\_subsurface\_temperature.py
-
+├── subsurface_temperature.py
+├── plot_subsurface_temperature.py
 ├── requirements.txt
-
 ├── README.md
-
 ├── LICENSE
-
 └── .gitignore
-
 ```
 
-
-
-\## Author
-
-
+## Author
 
 N. Mousavi
 
-
-
-\## Acknowledgments
-
-
+## Acknowledgments
 
 Global land boundaries are obtained from Natural Earth.
 
+## License
 
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-\## License
-
-
-
-This project is licensed under the MIT License. See \[LICENSE](LICENSE) for details.
-
-
-
-\## Citation
-
-
+## Citation
 
 If you use GeoTherm in your research, please acknowledge the project and its author.
-
-
-
